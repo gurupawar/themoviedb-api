@@ -11,6 +11,31 @@
         "src": "/movie",
         "methods": ["GET"],
         "dest": "/api/getdetails.js"
+     },
+    {
+        "src": "/movies/popular",
+        "methods": ["GET"],
+        "dest": "/api/popularMovies.js"
+     },
+    {
+        "src": "/movies/top-rated",
+        "methods": ["GET"],
+        "dest": "/api/topRatedMovies.js"
+     },
+    {
+        "src": "/movies/upcoming",
+        "methods": ["GET"],
+        "dest": "/api/upcomingMovies.js"
+     },
+    {
+        "src": "/tv",
+        "methods": ["GET"],
+        "dest": "/api/tvShows.js"
+     },
+    {
+        "src": "/tv/top-rated",
+        "methods": ["GET"],
+        "dest": "/api/tvTopRated.js"
      }
   ]
 }
