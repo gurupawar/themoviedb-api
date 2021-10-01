@@ -3,9 +3,15 @@
   "routes": [
     { "src": "/", "methods": ["GET"], "dest": "/api/index.js" },
     {
-        "src": "/searchmovie",
+        "src": "/search",
         "methods": ["GET"],
         "dest": "/api/searchmovie.js"
+     },
+    {
+        "src": "/movie",
+        "methods": ["GET"],
+        "dest": "/api/getdetails.js"
      }
   ]
 }
+

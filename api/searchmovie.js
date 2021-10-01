@@ -1,9 +1,11 @@
 const cheerio = require("cheerio");
 const fetchUrl = require("../utils/fetch");
+const { addHeaders } = require("../utils/headers");
 
+// search movie/shows
+// http://localhost:3000/search?title=movieName
 module.exports = async (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET");
+  addHeaders(res);
 
   let keyword = req.query.title;
   const endPoint = "search?query=";
@@ -23,6 +25,7 @@ module.exports = async (req, res) => {
         release_date: "",
         overview: "",
       };
+      ``;
 
       const ttl = $(ele).find("h2");
 
