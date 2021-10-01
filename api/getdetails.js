@@ -88,7 +88,9 @@ module.exports = async (req, res) => {
     });
 
     movieDetails.push(details);
-    res.json(movieDetails);
+    res.json({
+      data: movieDetails,
+    });
   } catch (err) {
     console.error(err);
   }

@@ -5,7 +5,9 @@ module.exports = async (req, res) => {
   try {
     const tvshows = await loopMovies(endPoint);
 
-    res.json(tvshows);
+    res.json({
+      data: tvshows,
+    });
   } catch (error) {
     console.log(error);
   }

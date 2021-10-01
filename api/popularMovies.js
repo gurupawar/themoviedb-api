@@ -38,7 +38,9 @@ module.exports = async (req, res) => {
     }
 
     movieList.push(movie);
-    res.json(movieList);
+    res.json({
+      data: movieList,
+    });
   } catch (error) {
     console.log(error);
   }

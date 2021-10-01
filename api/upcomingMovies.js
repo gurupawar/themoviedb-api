@@ -4,7 +4,9 @@ module.exports = async (req, res) => {
   const endPoint = "/movie/upcoming";
   try {
     const ucomingMv = await loopMovies(endPoint);
-    res.json(ucomingMv);
+    res.json({
+      data: ucomingMv,
+    });
   } catch (error) {
     console.log(error);
   }
