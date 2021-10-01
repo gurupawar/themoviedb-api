@@ -3,7 +3,7 @@ const fetchUrl = require("../utils/fetch");
 
 // get movie details by id
 // http://localhost:3000/movie?id=280690
-module.exports = async = (req, res) => {
+module.exports = async (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET");
   const id = req.query.id;
