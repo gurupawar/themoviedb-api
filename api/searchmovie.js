@@ -46,7 +46,9 @@ module.exports = async (req, res) => {
       searchResult.push(movieList);
     });
 
-    res.json(searchResult);
+    res.json({
+      data: searchResult,
+    });
   } catch (err) {
     console.error(err);
   }
