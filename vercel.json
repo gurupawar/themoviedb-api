@@ -1,6 +1,11 @@
 {
-    "version": 2,
-    "routes": [
-      {  "src":"/",    "dest":"./api/index.js"}
-    ]
-  }
+  "version": 2,
+  "routes": [
+    { "src": "/", "methods": ["GET"], "dest": "/api/index.js" },
+    {
+        "src": "/searchmovie",
+        "methods": ["GET"],
+        "dest": "/api/searchmovie.js"
+     }
+  ]
+}
