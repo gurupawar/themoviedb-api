@@ -1,11 +1,11 @@
 const cheerio = require("cheerio");
 const fetchUrl = require("../utils/fetch");
-const { addHeaders } = require("../utils/headers");
 
 // get movie details by id
 // http://localhost:3000/movie?id=280690
 module.exports = async = (req, res) => {
-  addHeaders(res);
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET");
   const id = req.query.id;
   const endPoint = "/movie";
   try {

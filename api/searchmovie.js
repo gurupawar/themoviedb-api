@@ -1,11 +1,11 @@
 const cheerio = require("cheerio");
 const fetchUrl = require("../utils/fetch");
-const { addHeaders } = require("../utils/headers");
 
 // search movie/shows
 // http://localhost:3000/search?title=movieName
 module.exports = async (req, res) => {
-  addHeaders(res);
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET");
 
   let keyword = req.query.title;
   const endPoint = "search?query=";

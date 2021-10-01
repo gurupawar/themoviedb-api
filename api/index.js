@@ -8,5 +8,3 @@ module.exports = (req, res) => {
     Author: "https://gurupawar.info",
   });
 };
-
-// https://themoviedb-api.vercel.app/searchmovie?title=mad%20max
