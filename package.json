@@ -1,0 +1,17 @@
+{
+  "name": "themoviedb-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "author": "Guru Pawar",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "cheerio": "^1.0.0-rc.10"
+  }
+}
