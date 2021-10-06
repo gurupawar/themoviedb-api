@@ -4,7 +4,7 @@ module.exports = async (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET");
 
-  const endPoint = "/tv";
+  const endPoint = "/tv/top-rated";
   try {
     const tvTop = await loopMovies(endPoint);
     res.json({
