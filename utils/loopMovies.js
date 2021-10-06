@@ -8,7 +8,6 @@ module.exports = async function loopMovies(endPoint) {
   }
   try {
     var movieList = [];
-    let movie = [];
 
     for (let i = 1; i <= 1; i++) {
       const { data } = await axios.get(
@@ -29,7 +28,7 @@ module.exports = async function loopMovies(endPoint) {
         const rating =
           $(ele).find(".user_score_chart").attr("data-percent") + "%";
 
-        movie.push({
+        movieList.push({
           id: id,
           title: h2title,
           release_date: date,
@@ -39,7 +38,6 @@ module.exports = async function loopMovies(endPoint) {
       });
     }
 
-    movieList.push(movie);
     MoviesListCache[endPoint] = movieList;
     return movieList;
   } catch (error) {
