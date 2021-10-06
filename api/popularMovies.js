@@ -6,7 +6,6 @@ module.exports = async (req, res) => {
   res.setHeader("Access-Control-Allow-Methods", "GET");
   try {
     var movieList = [];
-    let movie = [];
 
     for (let i = 1; i <= 5; i++) {
       const { data } = await axios.get(
@@ -27,7 +26,7 @@ module.exports = async (req, res) => {
         const rating =
           $(ele).find(".user_score_chart").attr("data-percent") + "%";
 
-        movie.push({
+        movieList.push({
           id: id,
           title: h2title,
           release_date: date,
@@ -37,7 +36,6 @@ module.exports = async (req, res) => {
       });
     }
 
-    movieList.push(movie);
     res.json({
       data: movieList,
     });
