@@ -31,7 +31,7 @@ module.exports = async (req, res) => {
           title: h2title,
           release_date: date,
           user_score: rating,
-          banner: mImg,
+          image: mImg,
         });
       });
     }

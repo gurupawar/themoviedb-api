@@ -33,11 +33,10 @@ module.exports = async function loopMovies(endPoint) {
           title: h2title,
           release_date: date,
           user_score: rating,
-          banner: mImg,
+          image: mImg,
         });
       });
     }
-
     MoviesListCache[endPoint] = movieList;
     return movieList;
   } catch (error) {
